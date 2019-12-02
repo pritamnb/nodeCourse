@@ -37,7 +37,6 @@ async function insertCustomer() {
   });
   const result = await customer.save();
   console.log('**********',result);
-  
 }
 // insertCustomer();
 exports.Customer = Customer; 

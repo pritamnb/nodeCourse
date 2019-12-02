@@ -1,5 +1,7 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
+const {Movie} = require('../models/movies'); 
+const {Customer} = require('../models/customer');
 
 const Rental = mongoose.model('Rental', new mongoose.Schema({
   customer: { 
@@ -55,10 +57,42 @@ const Rental = mongoose.model('Rental', new mongoose.Schema({
   }
 }));
 
+
+async function addRent(customerId,movieId) {
+  const customer = await Customer.findById(customerId);
+  if (!customer) console.log('Invalid customer.');
+  
+  console.log('customer details', customer);
+  
+  const movie = await Movie.findById(movieId);
+  if (!movie) console.log('Invalid Movie');
+  
+  console.log('Movie details', movie);
+  
+  
+  let rental = new Rental({ 
+    customer: {
+      _id: customer._id,
+      name: customer.name,
+      phone: customer.phone
+    },
+    movie: {
+      _id: movie._id,
+      title: movie.title,
+      dailyRentalRate: movie.dailyRentalRate
+    }
+  });
+  rental = await rental.save();
+
+  if(rental) movie.numberInStock--;
+  
+  movie.save();
+}
+// addRent('5de2b8cef89fcd2ebc373472','5de4fe8825ddc71498a3e7bd');
 function validateRental(rental) {
   const schema = {
-    customerId: Joi.string().required(),
-    movieId: Joi.string().required()
+    customerId: Joi.objectId().required(),
+    movieId: Joi.objectId().required()
   };
 
   return Joi.validate(rental, schema);
