@@ -3,9 +3,4 @@
 # Using express and nodejs
 
 Commnds 
-
-# npm install mongoose
-
-# npm install express
-
-# npm install joi
+# npm i
