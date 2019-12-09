@@ -3,3 +3,11 @@
 {"message":"Something failed miserably","level":"error"}
 {"message":"Something failed miserably","level":"error"}
 {"message":"Something failed miserably","level":"error"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-12-09T12:38:16.837Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2019-12-09T12:38:16.958Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-12-09T12:38:32.014Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2019-12-09T12:38:32.031Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-12-09T12:38:42.745Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2019-12-09T12:38:42.780Z"}
+{"level":"info","message":"Listening on port 3000...","timestamp":"2019-12-09T12:42:09.938Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2019-12-09T12:42:09.954Z"}
