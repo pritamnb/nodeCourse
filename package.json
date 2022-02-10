@@ -22,7 +22,7 @@
     "lodash": "^4.17.15",
     "mongoose": "^5.7.14",
     "node-pre-gyp": "^0.14.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "winston": "^2.4.0",
     "winston-mongodb": "^5.0.1"
   },
